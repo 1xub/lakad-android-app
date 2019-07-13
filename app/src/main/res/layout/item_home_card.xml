@@ -28,8 +28,8 @@
             android:id="@+id/tv_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/xs_padding"
             android:layout_marginLeft="@dimen/xs_padding"
+            android:layout_marginTop="@dimen/xs_padding"
             android:text="kim_jisoo"
             app:layout_constraintLeft_toRightOf="@+id/iv_profile_image"
             app:layout_constraintTop_toTopOf="@+id/iv_profile_image" />
@@ -71,8 +71,8 @@
             android:id="@+id/layout_post_details"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/s_padding"
             android:layout_marginLeft="@dimen/xs_padding"
+            android:layout_marginTop="@dimen/s_padding"
             android:layout_marginRight="@dimen/xs_padding"
             android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -136,7 +136,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginTop="@dimen/m_padding"
-            android:src="@drawable/ld_heart"
+            android:src="@drawable/footed"
             app:layout_constraintLeft_toLeftOf="@+id/layout_post_details"
             app:layout_constraintTop_toBottomOf="@+id/layout_post_details" />
 

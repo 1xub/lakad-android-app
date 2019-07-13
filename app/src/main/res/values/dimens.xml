@@ -75,4 +75,5 @@
     <dimen name="donwload_file_margine_end">10dp</dimen>
     <dimen name="download_file_padding_bottom">5dp</dimen>
 
+    <dimen name="trending_itinerary_image">100dp</dimen>
 </resources>

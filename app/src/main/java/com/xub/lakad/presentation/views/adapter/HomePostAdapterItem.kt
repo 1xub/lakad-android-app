@@ -2,13 +2,18 @@ package com.xub.lakad.presentation.views.adapter
 
 import android.annotation.SuppressLint
 import android.view.View
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.xub.lakad.R
 import com.xub.lakad.presentation.base.FastAdapterItem
+import kotlinx.android.synthetic.main.item_home_card.view.iv_home_heart
 
-class HomePostAdapterItem(destination: String) : FastAdapterItem<String, HomePostAdapterItem, HomePostAdapterItem.ViewHolder>(destination) {
+class HomePostAdapterItem(destination: String) :
+    FastAdapterItem<String, HomePostAdapterItem, HomePostAdapterItem.ViewHolder>(destination) {
 
     private var empId: Int? = null
+
+    private var isHeart = true
 
     fun setEmpId(id: Int) {
         empId = id
@@ -31,14 +36,22 @@ class HomePostAdapterItem(destination: String) : FastAdapterItem<String, HomePos
     }
 
     @SuppressLint("PrivateResource")
-    override fun bindView(holder: HomePostAdapterItem.ViewHolder, payloads: MutableList<Any>) {
+    override fun bindView(holder: ViewHolder, payloads: MutableList<Any>) {
         super.bindView(holder, payloads)
+
+        holder.view.iv_home_heart.setOnClickListener {
+            if (isHeart) {
+                holder.view.iv_home_heart.setImageResource(R.drawable.foot)
+            } else {
+                holder.view.iv_home_heart.setImageResource(R.drawable.footed)
+            }
+
+            isHeart = !isHeart
+        }
 
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+        val view = itemView as CardView
     }
-
-
 }
