@@ -9,13 +9,14 @@ import com.xub.lakad.R
 import com.xub.lakad.presentation.base.BaseFragment
 import com.xub.lakad.presentation.views.adapter.HomeDestinationAdapterItem
 import com.xub.lakad.presentation.views.adapter.HomePostAdapterItem
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_home.rv_destination_post
+import kotlinx.android.synthetic.main.fragment_home.rv_travel_post
 import org.koin.android.ext.android.inject
 
 class HomeFragment : BaseFragment<HomeMvpView, HomePresenter>(), HomeMvpView {
 
     companion object {
-        fun newInstance() : HomeFragment {
+        fun newInstance(): HomeFragment {
             return HomeFragment()
         }
     }
@@ -38,7 +39,8 @@ class HomeFragment : BaseFragment<HomeMvpView, HomePresenter>(), HomeMvpView {
         homePostAdapterItem = FastItemAdapter()
 
         rv_destination_post.itemAnimator = SlideDownAlphaAnimator()
-        rv_destination_post.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        rv_destination_post.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         rv_destination_post.adapter = homeDestinationAdapterItem
 
         rv_travel_post.itemAnimator = SlideDownAlphaAnimator()
@@ -49,17 +51,17 @@ class HomeFragment : BaseFragment<HomeMvpView, HomePresenter>(), HomeMvpView {
         initTravelPost()
     }
 
-    private fun initDestinations(){
+    private fun initDestinations() {
         homeDestinationAdapterItem.clear()
-        for(i in 0..5){
+        for (i in 0..5) {
             homeDestinationAdapterItem.add(HomeDestinationAdapterItem(""))
         }
         homeDestinationAdapterItem.notifyAdapterDataSetChanged()
     }
 
-    private fun initTravelPost(){
+    private fun initTravelPost() {
         homePostAdapterItem.clear()
-        for(i in 0..5){
+        for (i in 0..5) {
             homePostAdapterItem.add(HomePostAdapterItem(""))
         }
         homePostAdapterItem.notifyAdapterDataSetChanged()
