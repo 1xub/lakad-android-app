@@ -23,6 +23,13 @@ android {
 }
 
 dependencies {
+
+    final koin_version = "1.0.2"
+    final rx_java_version = "2.1.10"
+    final rx_android_version = "2.1.0"
+    final rx_kotlin_version = "2.2.0"
+    final fastAdapter_version = '3.3.1'
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'
@@ -31,4 +38,29 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    /* koin */
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+    testImplementation "org.koin:koin-test:$koin_version"
+
+    /* rx */
+    implementation "io.reactivex.rxjava2:rxjava:$rx_java_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rx_android_version"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rx_kotlin_version"
+
+    /* rxbinding */
+    implementation 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+
+    /* circleimageview */
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    /*fastadapter*/
+    implementation "com.mikepenz:fastadapter:$fastAdapter_version"
+    implementation "com.mikepenz:fastadapter-commons:$fastAdapter_version"
+    implementation "com.mikepenz:fastadapter-extensions-expandable:$fastAdapter_version"
+    implementation "com.mikepenz:fastadapter-extensions:$fastAdapter_version"
+    implementation 'com.mikepenz:materialize:1.2.0' // at least 1.2.0
+    implementation "com.mikepenz:itemanimators:1.1.0"
 }
