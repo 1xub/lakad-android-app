@@ -7,8 +7,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.xub.lakad.R
 import com.xub.lakad.presentation.base.BaseActivity
 import com.xub.lakad.presentation.helper.FragmentHelper
-import com.xub.lakad.presentation.profile.ProfileActivity
 import com.xub.lakad.presentation.views.home.HomeFragment
+import com.xub.lakad.presentation.views.profile.ProfileActivity
 import com.xub.lakad.presentation.views.search.SearchFragment
 import kotlinx.android.synthetic.main.activity_navigation.navigation
 import kotlinx.android.synthetic.main.layout_menu_toolbar.iv_bell
@@ -38,7 +38,6 @@ class NavigationActivity : BaseActivity<NavigationMvpView, NavigationPresenter>(
 
         FragmentHelper.setupFragment(supportFragmentManager, HomeFragment.newInstance(),R.id.frame_container)
     }
-
     private val mOnNavigationItemSelectedListener = object : BottomNavigationView.OnNavigationItemSelectedListener {
         override fun onNavigationItemSelected(item: MenuItem): Boolean {
             when(item.itemId){

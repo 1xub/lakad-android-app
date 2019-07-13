@@ -1,4 +1,4 @@
-package com.xub.lakad.presentation.profile
+package com.xub.lakad.presentation.views.profile
 
 import com.xub.lakad.presentation.base.BasePresenter
 

@@ -1,4 +1,4 @@
-package com.xub.lakad.presentation.profile
+package com.xub.lakad.presentation.views.profile
 
 import android.graphics.Paint
 import android.os.Bundle
@@ -7,15 +7,30 @@ import android.text.TextUtils
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.appbar.AppBarLayout
+import com.mikepenz.fastadapter.commons.adapters.FastItemAdapter
+import com.mikepenz.itemanimators.SlideDownAlphaAnimator
 import com.xub.lakad.R
 import com.xub.lakad.presentation.base.BaseActivity
 import com.xub.lakad.presentation.common.libs.AppBarStateChangeListener
+import com.xub.lakad.presentation.common.libs.HorizontalSpaceItemDecoration
 import com.xub.lakad.presentation.common.utils.Utils
-import kotlinx.android.synthetic.main.activity_profile.*
+import com.xub.lakad.presentation.views.adapter.ProfileItineraryAdapterItem
+import kotlinx.android.synthetic.main.activity_profile.app_bar
+import kotlinx.android.synthetic.main.activity_profile.imageView_avatar
+import kotlinx.android.synthetic.main.activity_profile.iv_profile_bg
+import kotlinx.android.synthetic.main.activity_profile.rv_itinerary
+import kotlinx.android.synthetic.main.activity_profile.space
+import kotlinx.android.synthetic.main.activity_profile.textView_title
+import kotlinx.android.synthetic.main.activity_profile.toolbar
+import kotlinx.android.synthetic.main.activity_profile.toolbar_title
+import kotlinx.android.synthetic.main.activity_profile.view_container
+import kotlinx.android.synthetic.main.activity_profile.view_profile_tint
 import org.koin.android.ext.android.inject
-import java.util.*
+import java.util.Locale
 import kotlin.math.roundToInt
+import kotlin.random.Random
 
 
 /**
@@ -36,6 +51,8 @@ class ProfileActivity : BaseActivity<ProfileMvpView, ProfilePresenter>(),
     private var mTitleTextViewPoint = FloatArray(2)
     private var mTitleTextSize: Float = 0f
     private var mAppBarStateChangeListener: AppBarStateChangeListener? = null
+
+    private lateinit var profileItineraryAdapterItem: FastItemAdapter<ProfileItineraryAdapterItem>
 
     private val mPresenter by inject<ProfilePresenter>()
 
@@ -78,7 +95,35 @@ class ProfileActivity : BaseActivity<ProfileMvpView, ProfilePresenter>(),
 
         app_bar.addOnOffsetChangedListener(mAppBarStateChangeListener)
         setUpToolbar()
-        resetPoints(true)
+
+        initRecyclerView()
+    }
+
+    private fun initRecyclerView() {
+        profileItineraryAdapterItem = FastItemAdapter()
+
+        rv_itinerary.itemAnimator = SlideDownAlphaAnimator()
+        rv_itinerary.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        rv_itinerary.addItemDecoration(HorizontalSpaceItemDecoration(30))
+        rv_itinerary.adapter = profileItineraryAdapterItem
+
+        initItineraryItems()
+    }
+
+    private fun initItineraryItems() {
+        profileItineraryAdapterItem.clear()
+        for (i in 0..5) {
+            profileItineraryAdapterItem.add(ProfileItineraryAdapterItem(
+                ProfileItinerary(
+                    image1 = R.drawable.image1,
+                    image2 = R.drawable.image2,
+                    image3 = R.drawable.image3,
+                    name = "Itinerary Name",
+                    heartCount = Random.nextDouble(1.0, 9.9)
+                )
+            ))
+        }
+        profileItineraryAdapterItem.notifyAdapterDataSetChanged()
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {
@@ -122,7 +167,7 @@ class ProfileActivity : BaseActivity<ProfileMvpView, ProfilePresenter>(),
         // If rtl should move title view to end of view.
         val isRTL =
             TextUtils.getLayoutDirectionFromLocale(Locale.getDefault()) == View.LAYOUT_DIRECTION_RTL ||
-                    view_container.layoutDirection == View.LAYOUT_DIRECTION_RTL
+                view_container.layoutDirection == View.LAYOUT_DIRECTION_RTL
 
         val minus0 = if (isRTL) toolbar_title.width else 0
         val minus1 = if (isRTL) textView_title.width else 0
@@ -132,8 +177,8 @@ class ProfileActivity : BaseActivity<ProfileMvpView, ProfilePresenter>(),
             0f
 
         val xTitleOffset = ((mToolbarTextPoint[0] + minus0) -
-                (mTitleTextViewPoint[0] + minus1) -
-                minus) * offset
+            (mTitleTextViewPoint[0] + minus1) -
+            minus) * offset
 
         val yTitleOffset = (mToolbarTextPoint[1] - mTitleTextViewPoint[1]) * offset
         textView_title.setTextSize(TypedValue.COMPLEX_UNIT_PX, newTextSize)
@@ -155,10 +200,10 @@ class ProfileActivity : BaseActivity<ProfileMvpView, ProfilePresenter>(),
         val avatarPoint = IntArray(2)
         imageView_avatar.getLocationOnScreen(avatarPoint)
         mAvatarPoint[0] = avatarPoint[0] - imageView_avatar.translationX -
-                (expandAvatarSize - newAvatarSize) / 2f
+            (expandAvatarSize - newAvatarSize) / 2f
         // If avatar center in vertical, just half `(expandAvatarSize - newAvatarSize)`
         mAvatarPoint[1] = avatarPoint[1] - imageView_avatar.translationY -
-                (expandAvatarSize - newAvatarSize)
+            (expandAvatarSize - newAvatarSize)
 
         val spacePoint = IntArray(2)
         space.getLocationOnScreen(spacePoint)
