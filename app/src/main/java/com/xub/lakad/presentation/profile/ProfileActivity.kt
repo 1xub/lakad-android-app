@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.text.TextUtils
 import android.util.TypedValue
+import android.view.Gravity
 import android.view.View
 import com.google.android.material.appbar.AppBarLayout
 import com.xub.lakad.R
@@ -59,6 +60,7 @@ class ProfileActivity : BaseActivity<ProfileMvpView, ProfilePresenter>(),
 
         app_bar.addOnOffsetChangedListener(mAppBarStateChangeListener)
         setUpToolbar()
+        resetPoints(true)
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {
@@ -111,14 +113,16 @@ class ProfileActivity : BaseActivity<ProfileMvpView, ProfilePresenter>(),
         else
             0f
 
-        val xTitleOffset = mToolbarTextPoint[0] + minus0 -
+        val xTitleOffset = ((mToolbarTextPoint[0] + minus0) -
                 (mTitleTextViewPoint[0] + minus1) -
-                minus * offset
+                minus) * offset
 
         val yTitleOffset = (mToolbarTextPoint[1] - mTitleTextViewPoint[1]) * offset
         textView_title.setTextSize(TypedValue.COMPLEX_UNIT_PX, newTextSize)
         textView_title.translationX = xTitleOffset
         textView_title.translationY = yTitleOffset
+        textView_title.gravity = Gravity.CENTER
+        textView_title.textAlignment = View.TEXT_ALIGNMENT_CENTER
     }
 
     private fun resetPoints(isTextChanged: Boolean) {
@@ -166,5 +170,8 @@ class ProfileActivity : BaseActivity<ProfileMvpView, ProfilePresenter>(),
         if (isTextChanged) {
             Handler().post { translationView(offset) }
         }
+
+        textView_title.gravity = Gravity.CENTER
+        textView_title.textAlignment = View.TEXT_ALIGNMENT_CENTER
     }
 }
