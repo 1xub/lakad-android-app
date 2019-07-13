@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.xub.lakad.R
 import com.xub.lakad.presentation.base.FastAdapterItem
 
-class HomePostAdapterItem(destination: String) : FastAdapterItem<String, HomePostAdapterItem, HomePostAdapterItem.ViewHolder>(destination) {
+class SearchCategoryAdapterItem(destination: String) : FastAdapterItem<String, SearchCategoryAdapterItem, SearchCategoryAdapterItem.ViewHolder>(destination) {
 
     private var empId: Int? = null
 
@@ -27,11 +27,11 @@ class HomePostAdapterItem(destination: String) : FastAdapterItem<String, HomePos
     }
 
     override fun getLayoutRes(): Int {
-        return R.layout.item_home_card
+        return R.layout.item_search_item
     }
 
     @SuppressLint("PrivateResource")
-    override fun bindView(holder: HomePostAdapterItem.ViewHolder, payloads: MutableList<Any>) {
+    override fun bindView(holder: SearchCategoryAdapterItem.ViewHolder, payloads: MutableList<Any>) {
         super.bindView(holder, payloads)
 
     }

@@ -15,11 +15,9 @@ import org.koin.android.ext.android.inject
 class HomeFragment : BaseFragment<HomeMvpView, HomePresenter>(), HomeMvpView {
 
     companion object {
-
         fun newInstance() : HomeFragment {
             return HomeFragment()
         }
-
     }
 
     private val mPresenter by inject<HomePresenter>()

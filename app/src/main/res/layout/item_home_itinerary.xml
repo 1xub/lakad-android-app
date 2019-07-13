@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/m_padding"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/s_padding">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/s_padding"
+        android:paddingRight="@dimen/s_padding"
+        android:paddingBottom="@dimen/s_padding">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="@dimen/xxs_padding"
+            android:layout_marginTop="@dimen/s_padding"
+            android:src="@drawable/ld_profile_card"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xs_padding"
+            android:layout_marginLeft="@dimen/xs_padding"
+            android:text="kim_jisoo"
+            app:layout_constraintLeft_toRightOf="@+id/iv_profile_image"
+            app:layout_constraintTop_toTopOf="@+id/iv_profile_image" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/s_padding"
+            android:layout_marginRight="@dimen/s_padding"
+            android:src="@drawable/ld_take_note"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/iv_profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile_image"
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/l_padding"
+            android:layout_marginTop="@dimen/l_padding"
+            android:background="@drawable/gray_border_radius"
+            android:padding="@dimen/s_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ld_home_red" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/xs_padding"
+            android:layout_marginTop="@dimen/m_padding"
+            android:text="8:30 AM"
+            android:textColor="@color/ub_black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_extra_small"
+            app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat2"
+            app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/xl_padding"
+            android:text="Flower garden resort"
+            android:textColor="@color/ub_black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/appCompatTextView2"
+            app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="16dp"
+            android:text="Bacon ipsum dolor amet shoulder sausage beef ribs ham hock. Sausage buffalo pork belly, spare ribs picanha capicola cow beef rump."
+            android:textSize="@dimen/text_extra_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/appCompatTextView3"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="@dimen/s_padding"
+            android:layout_marginLeft="@dimen/s_padding"
+            android:src="@drawable/ld_bus"
+            app:layout_constraintLeft_toLeftOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            tools:layout_editor_absoluteX="76dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 mins"
+            android:textSize="@dimen/text_extra_extra_small"
+            android:layout_marginLeft="@dimen/xxs_padding"
+            app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+            app:layout_constraintTop_toTopOf="@+id/appCompatImageView" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="70dp"
+            android:background="#c6c6c6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayoutCompat2"
+            app:layout_constraintStart_toStartOf="@+id/linearLayoutCompat2"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/layout_layout_1"
+            app:layout_constraintTop_toBottomOf="@+id/layout_layout_1"
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/l_padding"
+                android:background="@drawable/gray_border_radius"
+                android:padding="@dimen/s_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ld_restaurant" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/xs_padding"
+                android:layout_marginTop="@dimen/m_padding"
+                android:text="8:30 AM"
+                android:textColor="@color/ub_black"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_extra_small"
+                app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat3"
+                app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/xl_padding"
+                android:text="Manggahan Foodcourt"
+                android:textColor="@color/ub_black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/appCompatTextView4"
+                app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="16dp"
+                android:text="Bacon ipsum dolor amet shoulder sausage beef ribs ham hock. Sausage buffalo pork belly, spare ribs picanha capicola cow beef rump."
+                android:textSize="@dimen/text_extra_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/appCompatTextView5"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView5" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView1"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="@dimen/s_padding"
+                android:layout_marginLeft="@dimen/s_padding"
+                android:src="@drawable/ld_bus"
+                app:layout_constraintLeft_toLeftOf="@+id/view1"
+                app:layout_constraintTop_toTopOf="@+id/view1"
+                tools:layout_editor_absoluteX="76dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 hour"
+                android:textSize="@dimen/text_extra_extra_small"
+                android:layout_marginLeft="@dimen/xxs_padding"
+                app:layout_constraintStart_toEndOf="@+id/appCompatImageView1"
+                app:layout_constraintTop_toTopOf="@+id/appCompatImageView1" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="1dp"
+                android:layout_height="70dp"
+                android:background="#c6c6c6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayoutCompat3"
+                app:layout_constraintStart_toStartOf="@+id/linearLayoutCompat3"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/layout_layout_2"
+            app:layout_constraintTop_toBottomOf="@+id/layout_layout_2">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/l_padding"
+                android:background="@drawable/gray_border_radius"
+                android:padding="@dimen/s_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ld_biking" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/xs_padding"
+                android:layout_marginTop="@dimen/m_padding"
+                android:text="8:30 AM"
+                android:textColor="@color/ub_black"
+                android:textSize="@dimen/text_extra_small"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat6"
+                app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/xl_padding"
+                android:text="Biking Resort"
+                android:textColor="@color/ub_black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/appCompatTextView6"
+                app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="16dp"
+                android:text="Bacon ipsum dolor amet shoulder sausage beef ribs ham hock. Sausage buffalo pork belly, spare ribs picanha capicola cow beef rump."
+                android:textSize="@dimen/text_extra_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/appCompatTextView13"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView13" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="@dimen/l_padding"
+            android:text="@string/itinerary_book"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
