@@ -1,5 +1,6 @@
 package com.xub.lakad.presentation.views.home
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -9,6 +10,7 @@ import com.xub.lakad.R
 import com.xub.lakad.presentation.base.BaseFragment
 import com.xub.lakad.presentation.views.adapter.HomeDestinationAdapterItem
 import com.xub.lakad.presentation.views.adapter.HomePostAdapterItem
+import com.xub.lakad.presentation.views.home.details.ItineraryDetailsActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 import org.koin.android.ext.android.inject
 
@@ -44,6 +46,11 @@ class HomeFragment : BaseFragment<HomeMvpView, HomePresenter>(), HomeMvpView {
         rv_travel_post.itemAnimator = SlideDownAlphaAnimator()
         rv_travel_post.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         rv_travel_post.adapter = homePostAdapterItem
+
+        homePostAdapterItem.withOnClickListener { v, adapter, item, position ->
+            startActivity(Intent(context, ItineraryDetailsActivity::class.java))
+            true
+        }
 
         initDestinations()
         initTravelPost()
