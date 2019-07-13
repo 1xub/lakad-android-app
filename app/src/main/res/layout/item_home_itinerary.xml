@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/s_padding"
         android:paddingRight="@dimen/s_padding"
-        android:paddingBottom="@dimen/s_padding">
+        android:paddingBottom="@dimen/l_padding">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_profile_image"
@@ -33,6 +33,16 @@
             android:layout_marginLeft="@dimen/xs_padding"
             android:text="kim_jisoo"
             app:layout_constraintLeft_toRightOf="@+id/iv_profile_image"
+            app:layout_constraintTop_toTopOf="@+id/iv_profile_image" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/xs_padding"
+            android:layout_marginLeft="@dimen/xs_padding"
+            android:layout_marginTop="@dimen/xxs_padding"
+            android:src="@drawable/crest_crown"
+            app:layout_constraintStart_toEndOf="@+id/tv_username"
             app:layout_constraintTop_toTopOf="@+id/iv_profile_image" />
 
         <androidx.appcompat.widget.AppCompatImageView
