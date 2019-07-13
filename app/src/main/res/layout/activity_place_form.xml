@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toBottomOf="@+id/lin_places">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="@dimen/m_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_place_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_padding"
+            android:text="Jollibee"
+            android:hint="Search place"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_padding"
+            android:hint="What's here?"
+            android:text="A place where you can meet jollibee and friends (like hetty)"
+            app:layout_constraintTop_toBottomOf="@+id/et_place_name" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_place_category"
+            android:layout_width="match_parent"
+            android:text="BIKE"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_padding"
+            android:hint="Category"
+            app:layout_constraintTop_toBottomOf="@+id/et_description" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_padding"
+            android:text="5:30 AM"
+            android:hint="Preferred Time"
+            app:layout_constraintTop_toBottomOf="@+id/et_place_category" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_padding"
+            android:text="Images:"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_body"
+            app:layout_constraintTop_toBottomOf="@+id/et_time" />
+
+        <RelativeLayout
+            android:id="@+id/rel_image1"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/s_padding"
+            android:background="@drawable/background_attachment"
+            android:layerType="software"
+            android:minHeight="150dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/rel_image2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_image">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_add_grey_500_24dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_image2"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/s_padding"
+            android:background="@drawable/background_attachment"
+            android:layerType="software"
+            app:layout_constraintLeft_toRightOf="@+id/rel_image1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_image">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_add_grey_500_24dp" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Add Place"
+            android:textColor="@color/white_color"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
