@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,24 +9,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/iv_head_image"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:background="@drawable/bali_sample"
-        />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_head_image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/bali_sample"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_home_title"
@@ -46,8 +43,8 @@
             android:id="@+id/layout_post_details"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/xs_padding"
             android:layout_marginStart="15dp"
+            android:layout_marginTop="@dimen/xs_padding"
             android:layout_marginEnd="@dimen/xs_padding"
             android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -75,7 +72,6 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/xxs_padding"
                 android:text="@string/home_total_holder"
                 android:textSize="@dimen/text_extra_small" />
 
@@ -88,19 +84,18 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/xxs_padding"
                 android:text="@string/home_place_holder"
                 android:textSize="@dimen/text_extra_small" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="16dp"
                 android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/xs_padding"
                 android:src="@drawable/ld_person_run" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/xxs_padding"
                 android:text="@string/home_activities_holder"
                 android:textSize="@dimen/text_extra_small" />
 
@@ -130,8 +125,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@+id/view_divider"
-            app:layout_constraintTop_toBottomOf="@+id/view_divider"
-            >
+            app:layout_constraintTop_toBottomOf="@+id/view_divider">
+
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/linearLayoutCompat2"
                 android:layout_width="wrap_content"
@@ -141,8 +136,7 @@
                 android:background="@drawable/gray_border_radius"
                 android:padding="@dimen/s_padding"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                >
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="24dp"
@@ -159,8 +153,8 @@
                 android:layout_marginTop="@dimen/m_padding"
                 android:text="8:30 AM"
                 android:textColor="@color/ub_black"
-                android:textStyle="bold"
                 android:textSize="@dimen/text_extra_small"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat2"
                 app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat2" />
 
@@ -190,8 +184,8 @@
                 android:id="@+id/appCompatImageView"
                 android:layout_width="12dp"
                 android:layout_height="12dp"
-                android:layout_marginTop="@dimen/s_padding"
                 android:layout_marginLeft="@dimen/s_padding"
+                android:layout_marginTop="@dimen/s_padding"
                 android:src="@drawable/ld_bus"
                 app:layout_constraintLeft_toLeftOf="@+id/view"
                 app:layout_constraintTop_toTopOf="@+id/view" />
@@ -199,9 +193,9 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/xxs_padding"
                 android:text="30 mins"
                 android:textSize="@dimen/text_extra_extra_small"
-                android:layout_marginLeft="@dimen/xxs_padding"
                 app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
                 app:layout_constraintTop_toTopOf="@+id/appCompatImageView" />
 
@@ -223,8 +217,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@+id/layout_layout_1"
-            app:layout_constraintTop_toBottomOf="@+id/layout_layout_1"
-            >
+            app:layout_constraintTop_toBottomOf="@+id/layout_layout_1">
+
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/linearLayoutCompat3"
                 android:layout_width="wrap_content"
@@ -233,8 +227,7 @@
                 android:background="@drawable/gray_border_radius"
                 android:padding="@dimen/s_padding"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                >
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="24dp"
@@ -251,8 +244,8 @@
                 android:layout_marginTop="@dimen/m_padding"
                 android:text="8:30 AM"
                 android:textColor="@color/ub_black"
-                android:textStyle="bold"
                 android:textSize="@dimen/text_extra_small"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat3"
                 app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat3" />
 
@@ -282,8 +275,8 @@
                 android:id="@+id/appCompatImageView1"
                 android:layout_width="12dp"
                 android:layout_height="12dp"
-                android:layout_marginTop="@dimen/s_padding"
                 android:layout_marginLeft="@dimen/s_padding"
+                android:layout_marginTop="@dimen/s_padding"
                 android:src="@drawable/ld_bus"
                 app:layout_constraintLeft_toLeftOf="@+id/view1"
                 app:layout_constraintTop_toTopOf="@+id/view1" />
@@ -291,9 +284,9 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/xxs_padding"
                 android:text="1 hour"
                 android:textSize="@dimen/text_extra_extra_small"
-                android:layout_marginLeft="@dimen/xxs_padding"
                 app:layout_constraintStart_toEndOf="@+id/appCompatImageView1"
                 app:layout_constraintTop_toTopOf="@+id/appCompatImageView1" />
 
@@ -379,8 +372,8 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/l_padding"
-            android:text="@string/itinerary_book"
             android:background="@color/colorPrimary"
+            android:text="@string/itinerary_book"
             android:textColor="@color/white_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
