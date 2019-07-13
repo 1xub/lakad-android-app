@@ -1,5 +1,6 @@
 package com.xub.lakad.presentation.views.profile
 
+import android.content.Intent
 import android.graphics.Paint
 import android.os.Bundle
 import android.os.Handler
@@ -17,8 +18,10 @@ import com.xub.lakad.presentation.common.libs.AppBarStateChangeListener
 import com.xub.lakad.presentation.common.libs.HorizontalSpaceItemDecoration
 import com.xub.lakad.presentation.common.utils.Utils
 import com.xub.lakad.presentation.views.adapter.ProfileItineraryAdapterItem
+import com.xub.lakad.presentation.views.itinerary.ItineraryActivity
 import kotlinx.android.synthetic.main.activity_profile.app_bar
 import kotlinx.android.synthetic.main.activity_profile.imageView_avatar
+import kotlinx.android.synthetic.main.activity_profile.iv_add
 import kotlinx.android.synthetic.main.activity_profile.iv_profile_bg
 import kotlinx.android.synthetic.main.activity_profile.rv_itinerary
 import kotlinx.android.synthetic.main.activity_profile.space
@@ -97,6 +100,7 @@ class ProfileActivity : BaseActivity<ProfileMvpView, ProfilePresenter>(),
         setUpToolbar()
 
         initRecyclerView()
+        iv_add.setOnClickListener { startActivity(Intent(this, ItineraryActivity::class.java)) }
     }
 
     private fun initRecyclerView() {
