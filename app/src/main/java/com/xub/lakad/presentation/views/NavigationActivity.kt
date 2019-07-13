@@ -40,6 +40,7 @@ class NavigationActivity : BaseActivity<NavigationMvpView, NavigationPresenter>(
     }
     private val mOnNavigationItemSelectedListener = object : BottomNavigationView.OnNavigationItemSelectedListener {
         override fun onNavigationItemSelected(item: MenuItem): Boolean {
+
             when(item.itemId){
                 R.id.nav_home -> {
                     FragmentHelper.setupFragment(supportFragmentManager, HomeFragment.newInstance(),R.id.frame_container)
@@ -50,6 +51,7 @@ class NavigationActivity : BaseActivity<NavigationMvpView, NavigationPresenter>(
                     return true
                 }
             }
+
             return false
 
         }
