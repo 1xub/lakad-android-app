@@ -17,7 +17,9 @@ import kotlinx.android.synthetic.main.layout_trending_itinerary.view.tv_name
 import kotlin.random.Random
 
 class ProfileItineraryAdapterItem(model: ProfileItinerary) :
-    ModelAbstractItem<ProfileItinerary, ProfileItineraryAdapterItem, ProfileItineraryAdapterItem.ViewHolder>(model) {
+    ModelAbstractItem<ProfileItinerary, ProfileItineraryAdapterItem, ProfileItineraryAdapterItem.ViewHolder>(
+        model
+    ) {
 
     override fun getType(): Int = R.id.profile_itinerary_item
 
@@ -32,7 +34,7 @@ class ProfileItineraryAdapterItem(model: ProfileItinerary) :
         holder.view.iv_image1.setBackgroundResource(model.image1)
         holder.view.iv_image2.setBackgroundResource(model.image2)
         holder.view.iv_image3.setBackgroundResource(model.image3)
-        holder.view.tv_more.text = "${Random.nextInt(7)}+"
+        holder.view.tv_more.text = "${Random.nextInt(3, 7)}+"
         holder.view.tv_heart_count.text = "${NumberUtils.formatDecimal(model.heartCount, 1)}k"
         holder.view.tv_name.text = model.name
     }
