@@ -23,5 +23,4 @@ class NavigationActivity : BaseActivity<NavigationMvpView, NavigationPresenter>(
     override fun initViews(savedInstanceState: Bundle?) {
         FragmentHelper.setupFragment(supportFragmentManager, HomeFragment.newInstance(),R.id.frame_container)
     }
-
 }

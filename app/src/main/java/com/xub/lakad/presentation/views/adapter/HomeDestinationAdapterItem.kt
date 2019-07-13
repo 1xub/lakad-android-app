@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.xub.lakad.R
 import com.xub.lakad.presentation.base.FastAdapterItem
 
-class HomeDestinationAdapterItem(destination: String) : FastAdapterItem<String, HomeDestinationAdapterItem, HomeDestinationAdapterItem.ViewHolder>(destination) {
+class HomeDestinationAdapterItem(destination: String) :
+    FastAdapterItem<String, HomeDestinationAdapterItem, HomeDestinationAdapterItem.ViewHolder>(destination) {
 
     private var empId: Int? = null
 
@@ -39,6 +40,4 @@ class HomeDestinationAdapterItem(destination: String) : FastAdapterItem<String, 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     }
-
-
 }
