@@ -1,0 +1,76 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="horizontal_margin">16dp</dimen>
+    <dimen name="vertical_margin">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+
+    <dimen name="small_card_title_horizontal_padding">8dp</dimen>
+    <dimen name="small_card_title_vertical_padding">8dp</dimen>
+
+    <dimen name="vertical_list_padding">10dp</dimen>
+    <dimen name="horizontal_list_padding">16dp</dimen>
+
+    <dimen name="list_text_left_padding">72dp</dimen>
+    <dimen name="list_text_right_padding">72dp</dimen>
+    <dimen name="list_icon_left_padding">16dp</dimen>
+    <dimen name="list_icon_dimension">25dp</dimen>
+    <dimen name="list_icon_dimension_medium">40dp</dimen>
+
+    <dimen name="card_title_height">72dp</dimen>
+    <dimen name="card_title_horizontal_padding">16dp</dimen>
+    <dimen name="card_title_vertical_padding">16dp</dimen>
+    <dimen name="card_grid_height">150dp</dimen>
+    <dimen name="card_grid_title_height">68dp</dimen>
+
+    <dimen name="extra_small_list_height">60dp</dimen>
+    <dimen name="small_list_height">72dp</dimen>
+    <dimen name="large_list_height">88dp</dimen>
+
+    <dimen name="mpl_type_height">120dp</dimen>
+
+    <dimen name="text_banner">70sp</dimen>
+    <dimen name="text_large_headline">28sp</dimen>
+    <dimen name="text_headline">24sp</dimen>
+    <dimen name="text_large_title">22sp</dimen>
+    <dimen name="text_title">20sp</dimen>
+    <dimen name="text_large_header">20sp</dimen>
+    <dimen name="text_large_body">18sp</dimen>
+    <dimen name="text_body">16sp</dimen>
+    <dimen name="text_small_body">14sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_extra_small">10sp</dimen>
+    <dimen name="text_extra_extra_small">9sp</dimen>
+
+    <dimen name="button_radius">5dp</dimen>
+    <dimen name="grid_padding">4dp</dimen>
+
+    <dimen name="edittext_drawable_padding_left">10dp</dimen>
+
+    <dimen name="form_margin_top">5dp</dimen>
+    <dimen name="form_attachment_image_dimension">30dp</dimen>
+    <dimen name="custom_dialog_title_padding">50dp</dimen>
+
+    <dimen name="xxxs_padding">1dp</dimen>
+    <dimen name="xxs_padding">2dp</dimen>
+    <dimen name="xss_padding">3dp</dimen>
+    <dimen name="xs_padding">5dp</dimen>
+    <dimen name="s_padding">10dp</dimen>
+    <dimen name="m_padding">15dp</dimen>
+    <dimen name="l_padding">20dp</dimen>
+
+    <dimen name="m_icon_dimension">24dp</dimen>
+    <dimen name="custom_dialog_icon_margin_bottom">10dp</dimen>
+    <dimen name="benefit_list_height">140dp</dimen>
+    <dimen name="back_button_dimension">30dp</dimen>
+    <dimen name="toolbar_message_height">25dp</dimen>
+    <dimen name="pin_box_dimension">45dp</dimen>
+    <dimen name="pin_number_dimension">70dp</dimen>
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">9sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">9sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="download_file_font_size">17dp</dimen>
+    <dimen name="donwload_file_margine_end">10dp</dimen>
+    <dimen name="download_file_padding_bottom">5dp</dimen>
+
+</resources>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/l_padding"
+>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/s_padding"
+            android:paddingRight="@dimen/s_padding"
+            android:paddingBottom="@dimen/s_padding"
+    >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_profile_image"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/ld_profile_card"
+                android:layout_marginTop="@dimen/m_padding"
+                android:layout_marginLeft="@dimen/m_padding"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kim_jisoo"
+                android:layout_marginTop="@dimen/m_padding"
+                app:layout_constraintLeft_toRightOf="@+id/iv_profile_image"
+                app:layout_constraintTop_toTopOf="@+id/iv_profile_image"
+        />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/ld_take_note"
+                android:layout_marginTop="@dimen/m_padding"
+                android:layout_marginRight="@dimen/m_padding"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+        />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_post_image"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:src="@drawable/bali_sample"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="@dimen/s_padding"
+                app:layout_constraintTop_toBottomOf="@+id/iv_profile_image"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_home_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_title_placeholder"
+                android:layout_marginTop="@dimen/s_padding"
+                app:layout_constraintTop_toBottomOf="@+id/iv_post_image"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+        />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_post_details"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_home_title"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+        >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ld_time"
+            />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_time_holder"
+                    android:textSize="@dimen/text_extra_small"
+            />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ld_money"
+            />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_total_holder"
+                    android:textSize="@dimen/text_extra_small"
+            />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ld_place"
+            />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_place_holder"
+                    android:textSize="@dimen/text_extra_small"
+            />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ld_person_run"
+            />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_activities_holder"
+                    android:textSize="@dimen/text_extra_small"
+            />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_home_heart"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ld_heart"
+                android:layout_marginTop="@dimen/m_padding"
+                app:layout_constraintLeft_toLeftOf="@+id/layout_post_details"
+                app:layout_constraintTop_toBottomOf="@+id/layout_post_details"
+        />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ld_comment"
+                android:layout_marginTop="@dimen/m_padding"
+                android:layout_marginLeft="@dimen/s_padding"
+                app:layout_constraintLeft_toRightOf="@+id/iv_home_heart"
+                app:layout_constraintTop_toBottomOf="@+id/layout_post_details"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

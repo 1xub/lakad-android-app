@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">lakad</string>
+    <string name="app_name_home">Lakad</string>
+    <string name="home_trave_tour">Most Wanted Destinations</string>
+    <string name="home_title_placeholder">VIETNAM’S VIBRANT NIGHTLIFE, SECRET GARDENS &amp; FRESH CUISINE  </string>
+
+    <string name="home_time_holder">2 days 5 hours 55 mins</string>
+    <string name="home_total_holder">2,300</string>
+    <string name="home_place_holder">Vietnam</string>
+    <string name="home_activities_holder">5 activites</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_me_profile">Me</string>
+
 </resources>
