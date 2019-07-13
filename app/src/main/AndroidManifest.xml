@@ -20,9 +20,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".presentation.views.profile.ProfileActivity"/>
+        <activity android:name=".presentation.views.profile.ProfileActivity" />
         <activity android:name=".presentation.views.itinerary.ItineraryActivity" />
         <activity android:name=".presentation.views.placeform.PlaceFormActivity" />
-
+        <activity android:name=".presentation.views.home.details.ItineraryDetailsActivity" />
     </application>
 </manifest>
