@@ -17,6 +17,7 @@ import org.koin.android.ext.android.inject
 import java.util.*
 import kotlin.math.roundToInt
 
+
 /**
  * just came from library, deal with it :P
  * https://github.com/hearsilent/AmazingAvatar/blob/master/app/src/main/java/hearsilent/amazingavatar/MainActivity.java
@@ -47,6 +48,9 @@ class ProfileActivity : BaseActivity<ProfileMvpView, ProfilePresenter>(),
     override fun initViews(savedInstanceState: Bundle?) {
         mTitleTextSize = textView_title.textSize
         mAppBarStateChangeListener = object : AppBarStateChangeListener() {
+
+            var scrollRange = -1
+
             override fun onStateChanged(
                 appBarLayout: AppBarLayout,
                 state: State
@@ -55,6 +59,20 @@ class ProfileActivity : BaseActivity<ProfileMvpView, ProfilePresenter>(),
 
             override fun onOffsetChanged(state: State, offset: Float) {
                 translationView(offset)
+
+                //Initialize the size of the scroll
+                if (scrollRange == -1) {
+                    scrollRange = app_bar.totalScrollRange
+                }
+
+                //Check if the view is collapsed
+                if (offset.toInt() == 1) {
+                    iv_profile_bg.visibility = View.GONE
+                    view_profile_tint.visibility = View.GONE
+                } else {
+                    iv_profile_bg.visibility = View.VISIBLE
+                    view_profile_tint.visibility = View.VISIBLE
+                }
             }
         }
 
