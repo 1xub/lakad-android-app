@@ -24,9 +24,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/m_padding"
-            android:text="Jollibee"
             android:hint="Search place"
             style="@style/LDEditText"
+            android:text="Jollibee"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.xub.lakad.presentation.components.LDEditTextMultiLine
@@ -42,11 +42,11 @@
         <com.xub.lakad.presentation.components.LDEditText
             android:id="@+id/et_place_category"
             android:layout_width="match_parent"
-            android:text="BIKE"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/m_padding"
             android:hint="Category"
             style="@style/LDEditText"
+            android:text="BIKE"
             app:layout_constraintTop_toBottomOf="@+id/et_description" />
 
         <com.xub.lakad.presentation.components.LDEditText
@@ -54,9 +54,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/m_padding"
-            android:text="5:30 AM"
             android:hint="Preferred Time"
             style="@style/LDEditText"
+            android:text="5:30 AM"
             app:layout_constraintTop_toBottomOf="@+id/et_place_category" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -74,6 +74,7 @@
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_marginTop="@dimen/s_padding"
+            android:layout_marginRight="@dimen/xs_padding"
             android:background="@drawable/background_attachment"
             android:layerType="software"
             android:minHeight="150dp"

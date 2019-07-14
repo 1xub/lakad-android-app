@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/xs_padding"
             android:layout_marginTop="@dimen/xs_padding"
-            android:text="kim_jisoo"
+            android:text="Alexa"
             app:layout_constraintLeft_toRightOf="@+id/iv_profile_image"
             app:layout_constraintTop_toTopOf="@+id/iv_profile_image" />
 
@@ -100,7 +100,6 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/xxs_padding"
                 android:text="@string/home_total_holder"
                 android:textSize="@dimen/text_extra_small" />
 
@@ -113,19 +112,18 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/xxs_padding"
                 android:text="@string/home_place_holder"
                 android:textSize="@dimen/text_extra_small" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="16dp"
                 android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/xs_padding"
                 android:src="@drawable/ld_person_run" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/xxs_padding"
                 android:text="@string/home_activities_holder"
                 android:textSize="@dimen/text_extra_small" />
 
@@ -140,6 +138,34 @@
             app:layout_constraintLeft_toLeftOf="@+id/layout_post_details"
             app:layout_constraintTop_toBottomOf="@+id/layout_post_details" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_foot_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.3k"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_home_heart"
+            app:layout_constraintLeft_toRightOf="@+id/iv_home_heart"
+            app:layout_constraintTop_toTopOf="@+id/iv_home_heart" />
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_fork"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="@dimen/m_padding"
+            android:src="@drawable/fork"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_home_heart"
+            app:layout_constraintLeft_toRightOf="@+id/tv_foot_count"
+            app:layout_constraintTop_toTopOf="@+id/iv_home_heart" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_fork_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/s_padding"
+            android:text="59"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_home_heart"
+            app:layout_constraintLeft_toRightOf="@+id/iv_fork"
+            app:layout_constraintTop_toTopOf="@+id/iv_home_heart" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
