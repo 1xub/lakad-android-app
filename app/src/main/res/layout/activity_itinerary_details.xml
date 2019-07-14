@@ -106,9 +106,18 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginTop="@dimen/s_padding"
-            android:src="@drawable/ld_heart"
+            android:src="@drawable/footed"
             app:layout_constraintLeft_toLeftOf="@+id/layout_post_details"
             app:layout_constraintTop_toBottomOf="@+id/layout_post_details" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_foot_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.6k"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_home_heart"
+            app:layout_constraintLeft_toRightOf="@+id/iv_home_heart"
+            app:layout_constraintTop_toTopOf="@+id/iv_home_heart" />
 
         <View
             android:id="@+id/view_divider"
