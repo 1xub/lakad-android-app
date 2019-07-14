@@ -21,17 +21,7 @@ import kotlin.random.Random
 class HomePostAdapterItem(destination: String) :
     FastAdapterItem<String, HomePostAdapterItem, HomePostAdapterItem.ViewHolder>(destination) {
 
-    private var empId: Int? = null
-
     private var isHeart = true
-
-    fun setEmpId(id: Int) {
-        empId = id
-    }
-
-    fun getEmpId(): Int {
-        return empId!!
-    }
 
     override fun getType(): Int {
         return R.id.destination_item
