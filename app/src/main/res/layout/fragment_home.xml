@@ -31,6 +31,68 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/white_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_destination_post">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_category_bg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/s_padding"
+                android:layout_marginTop="@dimen/s_padding"
+                android:src="@color/white_color"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="1px"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="@dimen/xs_padding"
+                android:src="@drawable/ld_home_red"
+                app:layout_constraintBottom_toBottomOf="@+id/civ_category_bg"
+                app:layout_constraintLeft_toLeftOf="@+id/civ_category_bg"
+                app:layout_constraintRight_toRightOf="@+id/civ_category_bg"
+                app:layout_constraintTop_toTopOf="@+id/civ_category_bg" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/s_padding"
+                android:text="Water Resort"
+                android:textSize="@dimen/text_body"
+                app:layout_constraintBottom_toBottomOf="@+id/civ_category_bg"
+                app:layout_constraintLeft_toRightOf="@+id/civ_category_bg"
+                app:layout_constraintTop_toTopOf="@+id/civ_category_bg" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/s_padding"
+                android:numStars="5"
+                android:rating="4"
+                app:layout_constraintBottom_toBottomOf="@+id/civ_category_bg"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/civ_category_bg" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/s_padding"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water_resort"
+                app:layout_constraintTop_toBottomOf="@+id/civ_category_bg" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_travel_post"
             android:layout_width="match_parent"
@@ -43,7 +105,7 @@
             android:isScrollContainer="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_destination_post" />
+            app:layout_constraintTop_toBottomOf="@+id/const_ads" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
