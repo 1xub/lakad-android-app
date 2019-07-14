@@ -24,8 +24,8 @@
                 android:id="@+id/appCompatTextView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/s_padding"
                 android:layout_marginLeft="@dimen/m_padding"
+                android:layout_marginTop="@dimen/s_padding"
                 android:layout_marginBottom="@dimen/m_padding"
                 android:text="Itinerary Builder"
                 android:textColor="@android:color/black"
@@ -46,26 +46,49 @@
 
             <com.xub.lakad.presentation.components.LDEditText
                 android:id="@+id/et_name"
+                style="@style/LDEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/m_padding"
                 android:layout_marginTop="@dimen/s_padding"
                 android:layout_marginRight="@dimen/m_padding"
                 android:hint="Name"
-                style="@style/LDEditText"
                 app:layout_constraintTop_toBottomOf="@+id/iv_settings"
                 app:layout_goneMarginTop="@dimen/m_padding" />
 
             <com.xub.lakad.presentation.components.LDEditText
                 android:id="@+id/et_cost"
+                style="@style/LDEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/m_padding"
                 android:layout_marginTop="@dimen/s_padding"
                 android:layout_marginRight="@dimen/m_padding"
                 android:hint="Estimated Cost"
-                style="@style/LDEditText"
                 app:layout_constraintTop_toBottomOf="@+id/et_name"
+                app:layout_goneMarginTop="@dimen/m_padding" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_premium_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/l_padding"
+                android:layout_marginTop="@dimen/s_padding"
+                android:layout_marginRight="@dimen/l_padding"
+                android:text="This field is only available for premium users"
+                android:textSize="@dimen/text_extra_small"
+                app:layout_constraintTop_toBottomOf="@+id/et_cost" />
+
+            <com.xub.lakad.presentation.components.LDEditText
+                android:id="@+id/et_book_now"
+                style="@style/LDEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/m_padding"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:layout_marginRight="@dimen/m_padding"
+                android:hint="URL to your booking site"
+                app:layout_constraintTop_toBottomOf="@+id/tv_premium_note"
                 app:layout_goneMarginTop="@dimen/m_padding" />
 
             <LinearLayout
@@ -75,7 +98,7 @@
                 android:layout_marginTop="@dimen/xxl_padding"
                 android:orientation="vertical"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_cost">
+                app:layout_constraintTop_toBottomOf="@+id/et_book_now">
 
                 <include
                     android:id="@+id/add_place"
