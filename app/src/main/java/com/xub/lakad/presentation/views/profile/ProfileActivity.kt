@@ -1,5 +1,6 @@
 package com.xub.lakad.presentation.views.profile
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Paint
 import android.os.Bundle
@@ -15,6 +16,7 @@ import com.xub.lakad.R
 import com.xub.lakad.presentation.base.BaseActivity
 import com.xub.lakad.presentation.common.libs.AppBarStateChangeListener
 import com.xub.lakad.presentation.common.libs.HorizontalSpaceItemDecoration
+import com.xub.lakad.presentation.common.utils.DialogFactory
 import com.xub.lakad.presentation.common.utils.Utils
 import com.xub.lakad.presentation.views.adapter.ProfileItineraryAdapterItem
 import com.xub.lakad.presentation.views.itinerary.ItineraryActivity
@@ -104,13 +106,25 @@ class ProfileActivity : BaseActivity<ProfileMvpView, ProfilePresenter>(),
         iv_add.setOnClickListener { startActivity(Intent(this, ItineraryActivity::class.java)) }
         btn_upgrade.setOnClickListener {
             if (textView_title.isShimmerStarted) {
-                textView_title.stopShimmer()
-                btn_upgrade.text = "Upgrade Account"
-                btn_upgrade.setBackgroundResource(R.drawable.button_secondary)
+                DialogFactory.createConfirmDialog(this,
+                    "Cancel Subscription",
+                    "Are you sure you want to cancel your premium account subscription?",
+                    DialogInterface.OnClickListener { dialog, _ ->
+                        dialog.dismiss()
+                        textView_title.stopShimmer()
+                        btn_upgrade.text = "Upgrade Account"
+                        btn_upgrade.setBackgroundResource(R.drawable.button_secondary)
+                    }).show()
             } else {
-                textView_title.startShimmer()
-                btn_upgrade.text = "Premium Account"
-                btn_upgrade.setBackgroundResource(R.drawable.button_premium)
+                DialogFactory.createConfirmDialog(this,
+                    "Upgrade Account",
+                    "Are you sure you want to upgrade your account to premium?",
+                    DialogInterface.OnClickListener { dialog, _ ->
+                        dialog.dismiss()
+                        textView_title.startShimmer()
+                        btn_upgrade.text = "Premium Account"
+                        btn_upgrade.setBackgroundResource(R.drawable.button_premium)
+                    }).show()
             }
         }
     }
