@@ -10,13 +10,9 @@ import com.xub.lakad.R
 import com.xub.lakad.presentation.base.BaseFragment
 import com.xub.lakad.presentation.views.adapter.HomeDestinationAdapterItem
 import com.xub.lakad.presentation.views.adapter.HomePostAdapterItem
-<<<<<<< HEAD
 import com.xub.lakad.presentation.views.home.details.ItineraryDetailsActivity
-import kotlinx.android.synthetic.main.fragment_home.*
-=======
 import kotlinx.android.synthetic.main.fragment_home.rv_destination_post
 import kotlinx.android.synthetic.main.fragment_home.rv_travel_post
->>>>>>> e8885ce57b206e01b434b3635747b8b35a657430
 import org.koin.android.ext.android.inject
 
 class HomeFragment : BaseFragment<HomeMvpView, HomePresenter>(), HomeMvpView {

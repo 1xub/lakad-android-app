@@ -41,6 +41,9 @@
     <dimen name="text_extra_small">10sp</dimen>
     <dimen name="text_extra_extra_small">9sp</dimen>
 
+    <dimen name="edit_text_height">48dp</dimen>
+    <dimen name="edit_text_radius">8dp</dimen>
+
     <dimen name="button_radius">5dp</dimen>
     <dimen name="grid_padding">4dp</dimen>
 

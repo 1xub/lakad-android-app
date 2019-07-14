@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="ubButtonStyle" format="reference" />
+
+    <attr name="ubButtonLeftStyle" format="reference" />
+    <attr name="ubButtonMiddleStyle" format="reference" />
+    <attr name="ubButtonRightStyle" format="reference" />
+
+    <attr name="ubButtonPrimaryStyle" format="reference" />
+
+    <attr name="ubButtonLeftPrimaryStyle" format="reference" />
+    <attr name="ubButtonMiddlePrimaryStyle" format="reference" />
+    <attr name="ubButtonRightPrimaryStyle" format="reference" />
+
+    <attr name="ubButtonSmallStyle" format="reference" />
+
+    <attr name="ubButtonSmallLeftStyle" format="reference" />
+    <attr name="ubButtonSmallMiddleStyle" format="reference" />
+    <attr name="ubButtonSmallRightStyle" format="reference" />
+
+    <attr name="ubButtonSmallPrimaryStyle" format="reference" />
+
+    <attr name="ubButtonLeftSmallPrimaryStyle" format="reference" />
+    <attr name="ubButtonMiddleSmallPrimaryStyle" format="reference" />
+    <attr name="ubButtonRightSmallPrimaryStyle" format="reference" />
+
+    <attr name="listButtonStyle" format="reference" />
+    <attr name="ubListViewStyle" format="reference" />
+    <attr name="ubEditTextStyle" format="reference" />
+    <attr name="ubEditTextMultiLineStyle" format="reference" />
+    <attr name="ubAutoCompleteStyle" format="reference" />
+    <attr name="ubEditTextDropdownStyle" format="reference" />
+    <attr name="ubEditTextDateStyle" format="reference" />
+    <attr name="ubEditTextTimeStyle" format="reference" />
+    <attr name="ubSearchEditTextStyle" format="reference" />
+
+    <!-- UB Tab button style -->
+    <attr name="ubTabButtonLeftStyle" format="reference" />
+    <attr name="ubTabButtonMiddleStyle" format="reference" />
+    <attr name="ubTabButtonRightStyle" format="reference" />
+
+    <attr name="errorText" format="string|reference" />
+    <attr name="headerTitle" format="string|reference" />
+
+    <declare-styleable name="UBListButton">
+        <attr name="leftIcon" format="reference" />
+        <attr name="rightIcon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="UBAttachment">
+        <attr name="attachmentLabel" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="LDEditTextLayout">
+        <attr name="errorText" />
+        <attr name="headerTitle" />
+    </declare-styleable>
+
+    <declare-styleable name="UBAutoCompleteLayout">
+        <attr name="errorText" />
+        <attr name="headerTitle" />
+    </declare-styleable>
+</resources>

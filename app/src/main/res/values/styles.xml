@@ -8,4 +8,45 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Base.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="ubEditTextStyle">@style/LDEditText</item>
+        <item name="ubEditTextMultiLineStyle">@style/LDEditTextMultiLine</item>
+    </style>
+
+    <style name="LDEditText" parent="Base.EditText" />
+
+    <style name="EditTextTheme" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/edit_text_border</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
+    <!--UBEditText-->
+    <style name="Base.EditText" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/ub_edit_text_bg</item>
+        <item name="android:paddingLeft">@dimen/m_padding</item>
+        <item name="android:paddingRight">@dimen/m_padding</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:minHeight">@dimen/edit_text_height</item>
+        <item name="android:textCursorDrawable">@color/colorAccent</item>
+    </style>
+
+    <!-- UBEditTextMultiLine -->
+    <style name="Base.EditTextMultiLine" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/ub_edit_text_bg</item>
+        <item name="android:padding">@dimen/m_padding</item>
+        <item name="android:inputType">text|textMultiLine</item>
+        <item name="android:gravity">top</item>
+        <item name="android:lines">5</item>
+        <item name="android:maxLines">5</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:minHeight">@dimen/edit_text_height</item>
+        <item name="android:textCursorDrawable">@color/colorAccent</item>
+    </style>
+
+    <style name="LDEditTextMultiLine" parent="Base.EditTextMultiLine" />
+
+
 </resources>
